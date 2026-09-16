@@ -1,0 +1,62 @@
+name: Bug report
+description: Report a reproducible problem in the public Gateway using synthetic data only.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include real product cases, supplier data, Amazon account data, tokens, credentials, production payloads, or private-engine details. Report security issues through GitHub private vulnerability reporting.
+  - type: input
+    id: version
+    attributes:
+      label: Gateway version or commit
+      placeholder: v0.1.0 or commit SHA
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Request validation
+        - Sensitive-data screening
+        - HTTPS submission
+        - Response or signature verification
+        - Release provenance
+        - Documentation
+        - Other public Gateway behavior
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the observed and expected behavior without confidential data.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Synthetic reproduction
+      description: Provide minimal commands and synthetic input. Redact local usernames and absolute paths.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, Python version, and relevant public dependency versions.
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Data-safety confirmation
+      options:
+        - label: I used synthetic data and removed credentials, personal data, supplier identities, production payloads, and local absolute paths.
+          required: true
+        - label: This report does not disclose or attempt to infer private-engine methods, thresholds, weights, or formulas.
+          required: true
+

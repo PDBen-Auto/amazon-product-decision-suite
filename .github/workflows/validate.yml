@@ -1,0 +1,38 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install signature dependency
+        run: python -m pip install -r requirements.txt
+      - name: Validate synthetic request
+        run: python scripts/decision_client.py validate tests/fixtures/valid_request.json
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+      - name: Enforce public boundary
+        run: python scripts/check_public_boundary.py .
+      - name: Verify release manifest
+        run: python scripts/build_release_manifest.py . --check
+      - name: Verify publisher provenance
+        run: >-
+          python scripts/release_provenance.py verify-release
+          --manifest PUBLIC_MANIFEST.sha256
+          --provenance RELEASE_PROVENANCE.json
+          --signature RELEASE_PROVENANCE.sig
+          --public-key PUBLISHER_PUBLIC_KEY.pem
+          --expected-origin-id 5066c921-6f07-4768-9fe1-412f9931adca

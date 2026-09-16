@@ -1,0 +1,36 @@
+name: Feature request
+description: Suggest an improvement to the public Gateway surface.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Feature requests must stay within the public Gateway boundary. Requests to disclose, reproduce, probe, or approximate the private decision engine will not be accepted.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Public problem to solve
+      description: Explain the user-visible Gateway problem without real business data.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe the desired public contract, validation, security, documentation, or tooling behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Note current workarounds or simpler alternatives.
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Boundary confirmation
+      options:
+        - label: This request does not require private prompts, orchestration, weights, thresholds, formulas, production data, or credentials.
+          required: true
+

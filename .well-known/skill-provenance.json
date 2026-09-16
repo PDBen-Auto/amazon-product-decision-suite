@@ -1,0 +1,9 @@
+{
+  "network_behavior": "none",
+  "origin_id": "5066c921-6f07-4768-9fe1-412f9931adca",
+  "prompt_neutral": true,
+  "publisher_public_key_sha256": "d64d7ebc963fdaa86a44573bd226e8bb135d9d95818c5f39df88e0a45e886596",
+  "record_type": "skill-publisher-origin",
+  "schema_version": "1.0",
+  "skill_name": "amazon-product-decision-gateway"
+}

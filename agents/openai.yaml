@@ -1,0 +1,7 @@
+interface:
+  display_name: "Amazon Product Decision Gateway"
+  short_description: "Use a protected Amazon product decision engine"
+  default_prompt: "Use $amazon-product-decision-gateway to validate and submit this Amazon product decision bundle to the protected engine."
+
+policy:
+  allow_implicit_invocation: true

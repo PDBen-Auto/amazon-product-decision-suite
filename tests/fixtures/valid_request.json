@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "request_id": "demo-organizer-001",
+  "project": {
+    "decision_question": "Should this synthetic organizer concept advance to a 500-unit pilot?",
+    "marketplace": "amazon.com",
+    "currency": "USD",
+    "as_of_date": "2026-09-15"
+  },
+  "product_scope": {
+    "target": {
+      "product_id": "DEMO-ORGANIZER-001",
+      "id_type": "concept",
+      "label": "Synthetic organizer concept",
+      "variant": "v1"
+    },
+    "competitors": []
+  },
+  "evidence_bundle": {
+    "schema_version": "1.0",
+    "evidence": [
+      {
+        "evidence_id": "E001",
+        "domain": "market",
+        "field": "price.example",
+        "value": 29.99,
+        "unit": "USD",
+        "claim_type": "assumption",
+        "source": {
+          "type": "synthetic_fixture",
+          "locator": "demo-only"
+        },
+        "as_of": "2026-09-15",
+        "confidence": "low",
+        "status": "available"
+      }
+    ],
+    "assumptions": [],
+    "gaps": []
+  },
+  "business_constraints": {
+    "initial_inventory_units": 500,
+    "target_contribution_margin_rate": 0.18
+  },
+  "requested_outputs": [
+    "stage_matrix",
+    "verdict",
+    "conditions",
+    "gaps"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": "0.9",
+  "request_id": "",
+  "project": {
+    "decision_question": "",
+    "marketplace": "amazon.com",
+    "currency": "US",
+    "as_of_date": "15-09-2026"
+  },
+  "product_scope": {
+    "target": {
+      "product_id": "",
+      "id_type": "",
+      "label": ""
+    }
+  },
+  "evidence_bundle": {
+    "evidence": [
+      {"evidence_id": "E001"},
+      {"evidence_id": "E001"}
+    ],
+    "assumptions": "not-an-array",
+    "gaps": []
+  },
+  "requested_outputs": ["unknown_output"]
+}
