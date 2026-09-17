@@ -2,6 +2,15 @@
 
 All notable public Gateway changes are documented here. Private Engine changes are tracked separately and are intentionally excluded.
 
+## [0.1.1] - 2026-09-17
+
+### Changed
+
+- Improved GitHub discoverability with clearer Amazon FBA product-research, product-validation, stage-gate, sourcing, and unit-economics positioning.
+- Added bilingual use-case language and search-oriented terminology without changing the Gateway runtime contract.
+- Added release, validation, and Codex Skill badges to make repository status easier to assess.
+- Refined repository description and topics around product-manager and Amazon seller search intent.
+
 ## [0.1.0] - 2026-09-16
 
 ### Added
@@ -18,4 +27,3 @@ All notable public Gateway changes are documented here. Private Engine changes a
 
 - Private decision methods, weights, thresholds, formulas, business cases, credentials, and private keys are excluded from the public package.
 - External processing requires an HTTPS endpoint, a scoped token, and explicit user authorization at submission time.
-

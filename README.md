@@ -2,6 +2,12 @@
 
 [English](README.en.md) | 中文
 
+[![Release](https://img.shields.io/github/v/release/PDBen-Auto/amazon-product-decision-suite?display_name=tag)](https://github.com/PDBen-Auto/amazon-product-decision-suite/releases)
+[![Validate](https://github.com/PDBen-Auto/amazon-product-decision-suite/actions/workflows/validate.yml/badge.svg)](https://github.com/PDBen-Auto/amazon-product-decision-suite/actions/workflows/validate.yml)
+[![Codex Skill](https://img.shields.io/badge/Codex-Skill-111111)](SKILL.md)
+
+**Amazon FBA product research、product validation 与 Go/No-Go 决策 Skill。** 面向产品经理、Amazon Seller、跨境电商品类负责人和 Private Label 团队，覆盖市场研究、Voice of Customer、产品差异化、供应链可行性、单位经济与首单现金约束。
+
 面向 Amazon 实物产品立项的证据驱动决策系统。它不是再生成一份“市场看起来不错”的研究报告，而是帮助产品经理把市场、用户、产品、供应链和财务证据组织成可执行、可追溯、可否决的立项结论。
 
 公开仓库提供一个可安装的 Codex Gateway Skill，用统一数据契约连接市场 BI、评论/VOC、专利与合规、差异化研发、供应链和单位经济分析，同时把核心决策方法保留在独立私有 Engine 中。
@@ -48,11 +54,20 @@
 
 从产品管理角度看，核心价值不是“分析更多”，而是更早暴露错误假设、把下一步验证说清楚，并减少一个看起来有机会但最终无法生产、无法盈利或无法合规的产品被错误立项。
 
-## 适合与不适合的场景
+## 典型使用场景
 
-适合：跨多个证据源做正式立项、比较多个产品概念、决定是否进入打样/询盘/小批量测试，或需要向管理层解释结论、条件和风险。
+- **Amazon FBA Product Research / 亚马逊选品立项**：把市场规模、价格带、竞争、评论和产品事实汇总为是否继续投入的正式判断。
+- **Product Validation / 新品验证**：识别最危险的假设，明确进入打样、询盘、小批量测试前必须补齐的证据。
+- **Voice of Customer to Product Differentiation**：把评论痛点转成机制、规格、BOM/工艺影响、实验与淘汰条件。
+- **Supplier Sourcing / Supply Chain Feasibility**：判断 MOQ、模具、关键工艺、质量、合规、包装、交期和供应商承诺是否可执行。
+- **Unit Economics / Profitability / Cash Flow**：将采购、物流、Amazon 费用、广告、退货、贡献率、Break-even ACoS 和首单现金放进同一决策。
+- **Stage-Gate / Go-No-Go Decision**：为产品经理、品类负责人、供应链和财务提供统一的结论、条件、阻断和下一轮验证计划。
 
-不适合：只抓评论、只生成图片、只查一个专利、没有私有 Engine 却要求本地猜测官方评分，或把输出当作法律、认证、采购和量产批准。
+它适合跨多个证据源做正式立项、比较多个产品概念，或需要向管理层解释为什么进入或停止一个项目。
+
+它不适合只抓评论、只生成图片、只查一个专利、没有私有 Engine 却要求本地猜测官方评分，或把输出当作法律、认证、采购和量产批准。
+
+常见检索语义：`Amazon product research`、`Amazon FBA product validation`、`product opportunity analysis`、`new product development`、`product manager decision support`、`voice of customer`、`supplier sourcing`、`supply chain feasibility`、`unit economics`、`go/no-go decision`、`Codex Skill`、`Agent Skills`。
 
 ## 公开架构
 

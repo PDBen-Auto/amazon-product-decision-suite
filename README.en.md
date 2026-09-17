@@ -2,6 +2,12 @@
 
 English | [中文](README.md)
 
+[![Release](https://img.shields.io/github/v/release/PDBen-Auto/amazon-product-decision-suite?display_name=tag)](https://github.com/PDBen-Auto/amazon-product-decision-suite/releases)
+[![Validate](https://github.com/PDBen-Auto/amazon-product-decision-suite/actions/workflows/validate.yml/badge.svg)](https://github.com/PDBen-Auto/amazon-product-decision-suite/actions/workflows/validate.yml)
+[![Codex Skill](https://img.shields.io/badge/Codex-Skill-111111)](SKILL.md)
+
+**An Amazon FBA product research, product validation, and Go/No-Go decision Skill.** Built for product managers, Amazon sellers, cross-border ecommerce category owners, and private-label teams working across market research, Voice of Customer, product differentiation, supplier sourcing, supply-chain feasibility, unit economics, and first-order cash constraints.
+
 An evidence-driven product decision system for Amazon physical-product opportunities. It is designed for product managers who need to turn fragmented market, customer, product, supply-chain, and financial evidence into an actionable, auditable, and veto-capable launch decision.
 
 This public repository provides an installable Codex Gateway Skill that validates and submits structured evidence to a separately hosted private decision engine.
@@ -39,6 +45,17 @@ The suite does not claim to replace specialist tools for narrow tasks. Its advan
 7. **Protected method with verifiable results:** keeps proprietary thresholds and orchestration server-side while the Gateway binds request hashes and verifies signed responses.
 
 This is most useful for formal product approval, concept comparison, prototype or sourcing gates, and management review. For a single review scrape, patent lookup, or image-generation task, the relevant specialist Skill remains the more direct choice.
+
+## Typical Use Cases
+
+- **Amazon FBA product research:** combine market size, price bands, competition, reviews, and product facts into a formal investment decision.
+- **Amazon product validation:** expose risky assumptions and define the evidence required before prototyping, sourcing, or a pilot order.
+- **Voice of Customer to product differentiation:** convert review pain into mechanisms, specifications, BOM/process impact, experiments, and kill criteria.
+- **Supplier sourcing and supply-chain feasibility:** assess MOQ, tooling, critical processes, quality, compliance, packaging, lead time, and supplier claims.
+- **Unit economics, profitability, and cash flow:** connect landed cost, Amazon fees, ads, returns, contribution margin, break-even ACoS, and first-order cash.
+- **Stage-gate and Go/No-Go decisions:** give product, sourcing, and finance teams one shared conclusion, blockers, conditions, and next-validation plan.
+
+Related discovery terms include `Amazon product research`, `Amazon FBA product validation`, `product opportunity analysis`, `new product development`, `product manager decision support`, `voice of customer`, `supplier sourcing`, `supply chain feasibility`, `unit economics`, `go/no-go decision`, `Codex Skill`, and `Agent Skills`.
 
 ## Public Architecture
 
