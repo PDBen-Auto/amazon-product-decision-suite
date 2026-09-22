@@ -2,6 +2,14 @@
 
 All notable public Gateway changes are documented here. Private Engine changes are tracked separately and are intentionally excluded.
 
+## [0.1.3] - 2026-09-22
+
+### Added
+
+- Added a public decision-gateway case preview and bilingual README visual entry points.
+- Added citation, roadmap, and compatibility documentation for external adopters.
+- Re-signed the public manifest after the preview asset update.
+
 ## [0.1.1] - 2026-09-17
 
 ### Changed
