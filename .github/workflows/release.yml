@@ -30,9 +30,20 @@ jobs:
         shell: bash
         run: |
           mkdir -p dist/amazon-product-decision-gateway
-          cp -r SKILL.md agents references scripts requirements.txt LICENSE SECURITY.md .well-known PUBLISHER_PUBLIC_KEY.pem PUBLIC_MANIFEST.sha256 RELEASE_PROVENANCE.json RELEASE_PROVENANCE.sig dist/amazon-product-decision-gateway/
+          git archive --format=tar "${GITHUB_SHA}" | tar -x -C dist/amazon-product-decision-gateway
           find dist -type d -name __pycache__ -prune -exec rm -rf {} +
           find dist -type f -name '*.pyc' -delete
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          root = Path("dist/amazon-product-decision-gateway")
+          manifest = (root / "PUBLIC_MANIFEST.sha256").read_text(encoding="utf-8")
+          payload = json.loads((root / "RELEASE_PROVENANCE.json").read_text(encoding="utf-8"))
+          assert hashlib.sha256(manifest.encode()).hexdigest() == payload["manifest_sha256"]
+          for line in manifest.splitlines():
+              digest, relative = line.split("  ", 1)
+              assert hashlib.sha256((root / relative).read_bytes()).hexdigest() == digest, relative
+          PY
           cd dist
           zip -r amazon-product-decision-suite.zip amazon-product-decision-gateway
           sha256sum amazon-product-decision-suite.zip > amazon-product-decision-suite.zip.sha256
