@@ -5,6 +5,8 @@ English | [中文](README.md)
 [![Release](https://img.shields.io/github/v/release/PDBen-Auto/amazon-product-decision-suite?display_name=tag)](https://github.com/PDBen-Auto/amazon-product-decision-suite/releases)
 [![Validate](https://github.com/PDBen-Auto/amazon-product-decision-suite/actions/workflows/validate.yml/badge.svg)](https://github.com/PDBen-Auto/amazon-product-decision-suite/actions/workflows/validate.yml)
 [![Codex Skill](https://img.shields.io/badge/Codex-Skill-111111)](SKILL.md)
+[![skills.sh](https://skills.sh/b/PDBen-Auto/amazon-product-decision-suite)](https://skills.sh/PDBen-Auto/amazon-product-decision-suite/amazon-product-decision-gateway)
+[![License](https://img.shields.io/badge/license-source--available-59636e?style=flat-square)](LICENSE)
 
 **An Amazon FBA product research, product validation, and Go/No-Go decision Skill.** Built for product managers, Amazon sellers, cross-border ecommerce category owners, and private-label teams working across market research, Voice of Customer, product differentiation, supplier sourcing, supply-chain feasibility, unit economics, and first-order cash constraints.
 
@@ -100,6 +102,12 @@ See [Suite Overview](docs/SUITE_OVERVIEW.en.md), [Architecture](docs/ARCHITECTUR
 
 ## Install
 
+### One-command install
+
+```bash
+npx skills add PDBen-Auto/amazon-product-decision-suite --skill amazon-product-decision-gateway
+```
+
 ```bash
 git clone https://github.com/PDBen-Auto/amazon-product-decision-suite.git ~/.codex/skills/amazon-product-decision-gateway
 cd ~/.codex/skills/amazon-product-decision-gateway
@@ -136,3 +144,9 @@ The origin record is outside prompt-bearing Skill files and does not change mode
 ## License
 
 This public repository is source-available, not OSI open source. The current notice permits inspection and use of unmodified official releases but does not grant modification, derivative-work, redistribution, or official-representation rights. Review [LICENSE](LICENSE) and obtain legal advice before commercial distribution.
+
+## Related PDBen-Auto Skills
+
+- [Amazon Review Intelligence](https://github.com/PDBen-Auto/amazon-review-intelligence-skill)
+- [SellerSprite Amazon Market Research BI](https://github.com/PDBen-Auto/sellersprite-amazon-market-research-bi-skill)
+- [Design Patent Search And Design Around](https://github.com/PDBen-Auto/design-patent-design-around-skill)

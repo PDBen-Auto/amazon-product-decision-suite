@@ -1,0 +1,47 @@
+name: Publish installable gateway release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install and validate
+        run: |
+          python -m pip install -r requirements.txt
+          python scripts/decision_client.py validate tests/fixtures/valid_request.json
+          python -m unittest discover -s tests -v
+          python scripts/check_public_boundary.py .
+          python scripts/build_release_manifest.py . --check
+      - name: Package signed gateway
+        shell: bash
+        run: |
+          mkdir -p dist/amazon-product-decision-gateway
+          cp -r SKILL.md agents references scripts requirements.txt LICENSE SECURITY.md .well-known PUBLISHER_PUBLIC_KEY.pem PUBLIC_MANIFEST.sha256 RELEASE_PROVENANCE.json RELEASE_PROVENANCE.sig dist/amazon-product-decision-gateway/
+          find dist -type d -name __pycache__ -prune -exec rm -rf {} +
+          find dist -type f -name '*.pyc' -delete
+          cd dist
+          zip -r amazon-product-decision-suite.zip amazon-product-decision-gateway
+          sha256sum amazon-product-decision-suite.zip > amazon-product-decision-suite.zip.sha256
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          gh release create "${{ github.ref_name }}"
+          dist/amazon-product-decision-suite.zip
+          dist/amazon-product-decision-suite.zip.sha256
+          --repo "${{ github.repository }}"
+          --title "Amazon Product Decision Gateway ${{ github.ref_name }}"
+          --generate-notes

@@ -5,6 +5,8 @@
 [![Release](https://img.shields.io/github/v/release/PDBen-Auto/amazon-product-decision-suite?display_name=tag)](https://github.com/PDBen-Auto/amazon-product-decision-suite/releases)
 [![Validate](https://github.com/PDBen-Auto/amazon-product-decision-suite/actions/workflows/validate.yml/badge.svg)](https://github.com/PDBen-Auto/amazon-product-decision-suite/actions/workflows/validate.yml)
 [![Codex Skill](https://img.shields.io/badge/Codex-Skill-111111)](SKILL.md)
+[![skills.sh](https://skills.sh/b/PDBen-Auto/amazon-product-decision-suite)](https://skills.sh/PDBen-Auto/amazon-product-decision-suite/amazon-product-decision-gateway)
+[![License](https://img.shields.io/badge/license-source--available-59636e?style=flat-square)](LICENSE)
 
 **Amazon FBA product research、product validation 与 Go/No-Go 决策 Skill。** 面向产品经理、Amazon Seller、跨境电商品类负责人和 Private Label 团队，覆盖市场研究、Voice of Customer、产品差异化、供应链可行性、单位经济与首单现金约束。
 
@@ -120,6 +122,12 @@ Gateway 校验结果哈希与 Ed25519 签名
 
 ## 安装
 
+### 一条命令安装
+
+```bash
+npx skills add PDBen-Auto/amazon-product-decision-suite --skill amazon-product-decision-gateway
+```
+
 将仓库克隆到 Codex Skill 目录，并保持仓库根目录中的 `SKILL.md`、`agents/`、`scripts/` 和 `references/` 相邻：
 
 ```bash
@@ -200,3 +208,9 @@ d64d7ebc963fdaa86a44573bd226e8bb135d9d95818c5f39df88e0a45e886596
 ## 许可证
 
 本仓库公开可见，但当前许可证不是 OSI 开源许可证。它允许检查和使用未修改的官方发布，不授予修改、衍生、再分发或冒充官方版本的权利。正式商业使用前请阅读 [LICENSE](LICENSE) 并由专业法律顾问审阅。
+
+## Related PDBen-Auto Skills
+
+- [Amazon Review Intelligence](https://github.com/PDBen-Auto/amazon-review-intelligence-skill) — written-review collection and VOC analysis.
+- [SellerSprite Amazon Market Research BI](https://github.com/PDBen-Auto/sellersprite-amazon-market-research-bi-skill) — keyword-to-ASIN discovery and auditable category BI.
+- [Design Patent Search And Design Around](https://github.com/PDBen-Auto/design-patent-design-around-skill) — design-rights pre-screening and redesign planning.
