@@ -8,6 +8,8 @@
 [![skills.sh](https://skills.sh/b/PDBen-Auto/amazon-product-decision-suite)](https://skills.sh/PDBen-Auto/amazon-product-decision-suite/amazon-product-decision-gateway)
 [![License](https://img.shields.io/badge/license-source--available-59636e?style=flat-square)](LICENSE)
 
+![Amazon Product Decision Gateway preview showing a sanitized request contract, validation checks, and auditable handoff](assets/github-social-preview.png)
+
 **Amazon FBA product research、product validation 与 Go/No-Go 决策 Skill。** 面向产品经理、Amazon Seller、跨境电商品类负责人和 Private Label 团队，覆盖市场研究、Voice of Customer、产品差异化、供应链可行性、单位经济与首单现金约束。
 
 面向 Amazon 实物产品立项的证据驱动决策系统。它不是再生成一份“市场看起来不错”的研究报告，而是帮助产品经理把市场、用户、产品、供应链和财务证据组织成可执行、可追溯、可否决的立项结论。
