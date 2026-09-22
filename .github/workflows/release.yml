@@ -23,6 +23,7 @@ jobs:
           python -m pip install -r requirements.txt
           python scripts/decision_client.py validate tests/fixtures/valid_request.json
           python -m unittest discover -s tests -v
+          python tests/test_install_smoke.py
           python scripts/check_public_boundary.py .
           python scripts/build_release_manifest.py . --check
       - name: Package signed gateway
