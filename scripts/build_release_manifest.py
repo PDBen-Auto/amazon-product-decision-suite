@@ -27,7 +27,13 @@ def release_files(root: Path):
 def build(root: Path) -> str:
     lines = []
     for path, relative in release_files(root):
-        digest = hashlib.sha256(path.read_bytes()).hexdigest()
+        payload = path.read_bytes()
+        # GitHub checkouts normalize repository text files to LF. Normalize
+        # text-like files here as well so a Windows working tree produces the
+        # same manifest as the Linux release runner.
+        if b"\x00" not in payload:
+            payload = payload.replace(b"\r\n", b"\n")
+        digest = hashlib.sha256(payload).hexdigest()
         lines.append(f"{digest}  {relative}")
     return "\n".join(lines) + "\n"
 
