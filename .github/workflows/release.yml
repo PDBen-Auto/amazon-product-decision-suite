@@ -34,8 +34,9 @@ jobs:
           find dist -type d -name __pycache__ -prune -exec rm -rf {} +
           find dist -type f -name '*.pyc' -delete
           python - <<'PY'
-          import hashlib, json
+          import base64, hashlib, json
           from pathlib import Path
+          from cryptography.hazmat.primitives.serialization import load_pem_public_key
           root = Path("dist/amazon-product-decision-gateway")
           manifest = (root / "PUBLIC_MANIFEST.sha256").read_text(encoding="utf-8")
           payload = json.loads((root / "RELEASE_PROVENANCE.json").read_text(encoding="utf-8"))
@@ -43,6 +44,9 @@ jobs:
           for line in manifest.splitlines():
               digest, relative = line.split("  ", 1)
               assert hashlib.sha256((root / relative).read_bytes()).hexdigest() == digest, relative
+          canonical = json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()
+          signature = base64.b64decode((root / "RELEASE_PROVENANCE.sig").read_text().strip(), validate=True)
+          load_pem_public_key((root / "PUBLISHER_PUBLIC_KEY.pem").read_bytes()).verify(signature, canonical)
           PY
           cd dist
           zip -r amazon-product-decision-suite.zip amazon-product-decision-gateway
