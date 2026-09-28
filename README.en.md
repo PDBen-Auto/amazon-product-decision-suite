@@ -10,6 +10,10 @@ English | [中文](README.md)
 
 ![Amazon Product Decision Gateway preview showing a sanitized request contract, validation checks, and auditable handoff](assets/github-social-preview.png)
 
+## Start here: route the full product-research workflow
+
+Use the [Amazon Product Research Agent Skills suite](https://github.com/PDBen-Auto/amazon-product-research-agent-skills) when the question starts with market sizing, reviews, design risk, or supplier evidence. This repository is the decision gateway for a sanitized, evidence-bound bundle; it does not replace the specialist modules.
+
 **An Amazon FBA product research, product validation, and Go/No-Go decision Skill.** Built for product managers, Amazon sellers, cross-border ecommerce category owners, and private-label teams working across market research, Voice of Customer, product differentiation, supplier sourcing, supply-chain feasibility, unit economics, and first-order cash constraints.
 
 An evidence-driven product decision system for Amazon physical-product opportunities. It is designed for product managers who need to turn fragmented market, customer, product, supply-chain, and financial evidence into an actionable, auditable, and veto-capable launch decision.

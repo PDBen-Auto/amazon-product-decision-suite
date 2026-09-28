@@ -20,6 +20,10 @@
 
 > 当前公开版本是 Gateway，而不是私有决策 Engine。它可以在本地完成数据校验、敏感信息检查、请求哈希和官方结果验签；要返回正式产品决策，还需要部署私有服务。
 
+## Start here: route the full product-research workflow
+
+Use the [Amazon Product Research Agent Skills suite](https://github.com/PDBen-Auto/amazon-product-research-agent-skills) when the question starts with market sizing, reviews, design risk, or supplier evidence. This repository is the decision gateway that receives a sanitized, evidence-bound bundle; it does not replace the specialist modules.
+
 ## 产品经理面对的真正问题
 
 产品经理通常不缺报告，缺的是一条能经得住复盘的决策链。市场工具说有需求、评论工具说有痛点、专利工具提示风险、供应商说可以生产、利润表说可能赚钱，但这些结论往往来自不同时间、不同口径和不同假设，最后仍然没人能明确回答“是否值得立项”。
