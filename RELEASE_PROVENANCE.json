@@ -1,10 +1,10 @@
 {
-  "created_at_utc": "2026-09-22T11:33:22Z",
-  "manifest_sha256": "4abf34ff1f58da52c8b36c883399315c6d0dfa4fbfd96d1ea0a2f17a5329989b",
+  "created_at_utc": "2026-10-27T11:04:32Z",
+  "manifest_sha256": "d2427d578f9da6e82515e87811f316bcda67718baf81fe370faca08cf70fa584",
   "origin_id": "5066c921-6f07-4768-9fe1-412f9931adca",
   "prompt_neutral": true,
   "publisher_public_key_sha256": "d64d7ebc963fdaa86a44573bd226e8bb135d9d95818c5f39df88e0a45e886596",
-  "release_version": "v0.1.4",
+  "release_version": "v0.1.6",
   "repository": "https://github.com/PDBen-Auto/amazon-product-decision-suite",
   "schema_version": "1.0",
   "scope": "public-skill-package",

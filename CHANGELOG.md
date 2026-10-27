@@ -2,6 +2,12 @@
 
 All notable public Gateway changes are documented here. Private Engine changes are tracked separately and are intentionally excluded.
 
+## [0.1.6] - 2026-10-27
+
+### Fixed
+
+- Rebuilt and re-signed the public release manifest after the latest suite-entry-point documentation changes, so validation remains consistent with the current `main` package.
+
 ## [0.1.3] - 2026-09-22
 
 ### Added
